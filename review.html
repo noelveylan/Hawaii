@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leave a review</title>
+
+<!-- ===================================================================
+     AFTER YOU PUBLISH: replace ASIN below with your real ASIN.
+     Find it in KDP Bookshelf, or in the Amazon product page URL:
+     amazon.com/dp/B0XXXXXXXX   <-- that is the ASIN
+     Change it in BOTH places marked CHANGE THIS.
+     Nothing in the printed book needs to change.
+     =================================================================== -->
+<script>
+  var ASIN = "REPLACE_WITH_YOUR_ASIN";            // CHANGE THIS
+  var url  = "https://www.amazon.com/review/create-review?asin=" + ASIN;
+  if (ASIN.indexOf("REPLACE") === -1) { window.location.replace(url); }
+</script>
+
+<style>
+  body{background:#0A1A2F;color:#C9D4E0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:24px;text-align:center}
+  .box{max-width:420px}
+  h1{color:#fff;font-size:22px;margin:0 0 12px}
+  a{color:#E8A33D;font-weight:700}
+  .btn{display:inline-block;margin-top:20px;padding:14px 28px;border-radius:6px;
+       background:#E8A33D;color:#0A1A2F;font-weight:800;text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>Taking you to the review page…</h1>
+    <p>If nothing happens, search the book title on Amazon and scroll to the
+       review section.</p>
+    <!-- CHANGE THIS too: same ASIN -->
+    <a class="btn" href="https://www.amazon.com/review/create-review?asin=REPLACE_WITH_YOUR_ASIN">Open Amazon</a>
+    <p style="margin-top:22px;font-size:14px"><a href="index.html">Back to the bonus pack</a></p>
+  </div>
+</body>
+</html>

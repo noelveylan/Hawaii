@@ -1,0 +1,35 @@
+COLOUR MAPS FOR THE BONUS PACK
+==============================
+
+The atlas prints black and white for the book interior. For the bonus pack
+you want the same maps in colour.
+
+In hawaii-atlas/atlas/config.py, replace the INK dictionary with:
+
+INK = dict(
+    land="#F7F3E8",
+    land_edge="#3A4A3A",
+    water="#BBD9E8",
+    water_deep="#9CC6DC",
+    water_edge="#7FAFC9",
+    park_fill="#DCE8D2",
+    park_edge="#7A9A6A",
+    road="#C0392B",
+    road_casing="#FFFFFF",
+    dot="#2C3E50",
+    label="#1A1A1A",
+    label_soft="#4A5A6A",
+    halo="#FFFFFF",
+    frame="#3A4A3A",
+)
+
+Then:
+    python run.py --all --out output_colour
+
+Combine the PNGs into one PDF:
+    python -c "from PIL import Image; import glob; \
+    f=[Image.open(p).convert('RGB') for p in sorted(glob.glob('output_colour/*.png'))]; \
+    f[0].save('hawaii-2027-maps-colour.pdf', save_all=True, append_images=f[1:])"
+
+Keep a copy of the original black-and-white INK block before you overwrite it,
+or the book interior maps will regenerate in colour on your next run.
