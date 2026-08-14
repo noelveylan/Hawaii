@@ -22,7 +22,10 @@
   /* header */
   header{padding:48px 0 40px;text-align:center;border-bottom:1px solid var(--ink-line)}
   .cover{
-    width:132px;margin:0 auto 26px;display:block;border-radius:3px;
+    /* height:auto is required: the img carries width/height attributes so the
+       browser can reserve space before load, and without this the attribute
+       height wins over the CSS width and stretches the cover. */
+    width:132px;height:auto;margin:0 auto 26px;display:block;border-radius:3px;
     box-shadow:0 14px 34px rgba(0,0,0,.55), 0 0 0 1px rgba(232,163,61,.25);
   }
   @media(min-width:640px){
