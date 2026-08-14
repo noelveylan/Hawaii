@@ -109,9 +109,11 @@
 
   <header>
     <div class="headrow">
-      <!-- Export your front cover as PNG or JPG, ~600px wide, save as
-           files/cover.jpg  and it appears here automatically. -->
-      <img class="cover" src="files/cover.jpg" alt="Hawaii by Land and Sea Travel Guide 2027"
+      <!-- Export your front cover as PNG or JPG, save as files/cover.jpg,
+           then run:  python convert_images.py --max-width 450
+           to regenerate files/cover.webp, which is what loads below. -->
+      <img class="cover" src="files/cover.webp" alt="Hawaii by Land and Sea Travel Guide 2027"
+           width="450" height="675" loading="eager" decoding="async"
            onerror="this.style.display='none'">
       <div>
         <div class="eyebrow">Hawaii by Land and Sea · 2027</div>
